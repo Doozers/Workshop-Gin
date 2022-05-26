@@ -16,7 +16,7 @@ func ItemTemplate(c *gin.Context) {
 
 func ItemDisplay(c *gin.Context) {
 	i := new(s.Item)
-	if err := c.BindJSON(i); err != nil {
+	if err := c.ShouldBindJSON(i); err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
@@ -35,7 +35,7 @@ func GetItem(c *gin.Context) {
 
 func CreateItem(c *gin.Context) {
 	i := new(s.Item)
-	if err := c.BindJSON(i); err != nil {
+	if err := c.ShouldBindJSON(i); err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
@@ -51,7 +51,7 @@ func CreateItem(c *gin.Context) {
 
 func DeleteItem(c *gin.Context) {
 	i := new(s.Item)
-	if err := c.BindJSON(i); err != nil {
+	if err := c.ShouldBindJSON(i); err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
@@ -67,7 +67,7 @@ func DeleteItem(c *gin.Context) {
 
 func UpdateItem(c *gin.Context) {
 	i := new(s.Item)
-	if err := c.BindJSON(i); err != nil {
+	if err := c.ShouldBindJSON(i); err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
@@ -83,7 +83,7 @@ func UpdateItem(c *gin.Context) {
 
 func CreateItems(c *gin.Context) {
 	i := new([]s.Item)
-	if err := c.BindJSON(i); err != nil {
+	if err := c.ShouldBindJSON(i); err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}

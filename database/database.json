@@ -23,5 +23,10 @@
   "name": "objetALPHA",
   "description": "un bel objet",
   "price": 10
+ },
+ {
+  "name": "objet10",
+  "description": "un bel objeEEEt",
+  "price": 10
  }
 ]
